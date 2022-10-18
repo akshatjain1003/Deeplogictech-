@@ -15,7 +15,7 @@ def get_response():
   for i in zip(timest,title_links):
     k.append(i)
   res = []
-  for m in sorted(k):
+  for m in sorted(k,reverse=True):
     res.append({
         'title':m[1][0],
         'link':m[1][1]
