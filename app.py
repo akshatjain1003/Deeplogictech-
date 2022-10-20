@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 app= Flask(__name__)
 
-@app.route('/')
+@app.route('/getstories')
 def get_response():
   res = requests.get("https://www.time.com")
   soup = BeautifulSoup(res.text,'html.parser')
@@ -21,3 +21,4 @@ def get_response():
         'link':m[1][1]
     })
   return jsonify(res[:5])
+app.run(debug=True,port=5000)
