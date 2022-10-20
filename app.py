@@ -21,4 +21,3 @@ def get_response():
         'link':m[1][1]
     })
   return jsonify(res[:5])
-app.run(debug=True,port=5000)
